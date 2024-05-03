@@ -14,10 +14,13 @@ add_ip(simjtag
 
 ip_include_directories(${IP} SYSTEMVERILOG
     ${PROJECT_SOURCE_DIR}/src
+    ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang
 )
 
 ip_sources(${IP} SYSTEMVERILOG
     ${PROJECT_SOURCE_DIR}/rtl/tb/SimJTAG.sv
+    ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang/sim_jtag.c
+    ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang/remote_bitbang.c
 )
 
 # How to include them properly?
