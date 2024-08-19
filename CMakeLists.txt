@@ -12,12 +12,12 @@ add_ip(simjtag
     VERSION 7.0.0
     )
 
-ip_include_directories(${IP} SYSTEMVERILOG
+ip_include_directories(${IP} SYSTEMVERILOG_SIM
     ${PROJECT_SOURCE_DIR}/src
     ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang
 )
 
-ip_sources(${IP} SYSTEMVERILOG
+ip_sources(${IP} SYSTEMVERILOG_SIM
     ${PROJECT_SOURCE_DIR}/rtl/tb/SimJTAG.sv
     ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang/sim_jtag.c
     ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang/remote_bitbang.c
