@@ -10,14 +10,13 @@ add_ip(simjtag
     VENDOR pulp_platform
     LIBRARY dpi
     VERSION 7.0.0
-    )
+)
 
-ip_include_directories(${IP} SYSTEMVERILOG_SIM
-    ${PROJECT_SOURCE_DIR}/src
+ip_include_directories(${IP} SYSTEMVERILOG
     ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang
 )
 
-ip_sources(${IP} SYSTEMVERILOG_SIM
+ip_sources(${IP} SYSTEMVERILOG_TB
     ${PROJECT_SOURCE_DIR}/rtl/tb/SimJTAG.sv
     ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang/sim_jtag.c
     ${PROJECT_SOURCE_DIR}/rtl/tb/remote_bitbang/remote_bitbang.c
